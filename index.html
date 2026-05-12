@@ -1,324 +1,693 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+
+<html class="light" lang="id">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Toko Digital Premium</title>
-
-        <!-- Tailwind CSS -->
-        <script src="https://cdn.tailwindcss.com"></script>
-
-        <!-- Font -->
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Donasi Kemanusiaan - Ulurkan Tangan, Beri Harapan</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-            rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet"
         />
-
+        <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet"
+        />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet"
+        />
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "surface-bright": "#f7f9fb",
+                "on-tertiary-container": "#888fa7",
+                "primary-fixed-dim": "#bcc7de",
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed-variant": "#653e00",
+                "surface-tint": "#545f73",
+                "on-background": "#191c1e",
+                error: "#ba1a1a",
+                "on-tertiary-fixed": "#131b2e",
+                "on-tertiary-fixed-variant": "#3f465c",
+                "tertiary-container": "#20283c",
+                "primary-container": "#1e293b",
+                surface: "#f7f9fb",
+                "primary-fixed": "#d8e3fb",
+                "error-container": "#ffdad6",
+                "inverse-on-surface": "#eff1f3",
+                outline: "#75777d",
+                "on-primary-container": "#8590a6",
+                secondary: "#855300",
+                "on-surface-variant": "#45474c",
+                "inverse-surface": "#2d3133",
+                background: "#f7f9fb",
+                "surface-container-lowest": "#ffffff",
+                "on-primary": "#ffffff",
+                "on-error": "#ffffff",
+                tertiary: "#0b1426",
+                "on-primary-fixed": "#111c2d",
+                primary: "#091426",
+                "on-surface": "#191c1e",
+                "surface-container-highest": "#e0e3e5",
+                "surface-container-high": "#e6e8ea",
+                "tertiary-fixed-dim": "#bec6e0",
+                "secondary-container": "#fea619",
+                "on-secondary-fixed": "#2a1700",
+                "on-secondary-container": "#684000",
+                "secondary-fixed": "#ffddb8",
+                "outline-variant": "#c5c6cd",
+                "secondary-fixed-dim": "#ffb95f",
+                "surface-variant": "#e0e3e5",
+                "surface-dim": "#d8dadc",
+                "tertiary-fixed": "#dae2fd",
+                "on-error-container": "#93000a",
+                "inverse-primary": "#bcc7de",
+                "on-tertiary": "#ffffff",
+                "surface-container": "#eceef0",
+                "surface-container-low": "#f2f4f6",
+                "on-primary-fixed-variant": "#3c475a",
+                "warm-orange": "#F59E0B",
+                "deep-navy": "#1E293B",
+                },
+                borderRadius: {
+                DEFAULT: "0.25rem",
+                lg: "0.5rem",
+                xl: "0.75rem",
+                full: "9999px",
+                },
+                spacing: {
+                gutter: "1.5rem",
+                "margin-desktop": "2rem",
+                "margin-mobile": "1rem",
+                "stack-xl": "4rem",
+                "stack-sm": "0.5rem",
+                "margin-tablet": "1.5rem",
+                "container-max": "1280px",
+                "stack-md": "1rem",
+                "stack-lg": "2rem",
+                },
+                fontFamily: {
+                "label-bold": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Montserrat"],
+                "headline-xl-mobile": ["Montserrat"],
+                "headline-lg": ["Montserrat"],
+                "headline-xl": ["Montserrat"],
+                "body-md": ["Inter"],
+                "label-sm": ["Inter"],
+                },
+                fontSize: {
+                "label-bold": [
+                    "14px",
+                    {
+                    lineHeight: "20px",
+                    letterSpacing: "0.05em",
+                    fontWeight: "600",
+                    },
+                ],
+                "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                "headline-md": [
+                    "24px",
+                    { lineHeight: "32px", fontWeight: "600" },
+                ],
+                "headline-xl-mobile": [
+                    "40px",
+                    {
+                    lineHeight: "48px",
+                    letterSpacing: "-0.02em",
+                    fontWeight: "700",
+                    },
+                ],
+                "headline-lg": [
+                    "36px",
+                    {
+                    lineHeight: "44px",
+                    letterSpacing: "-0.01em",
+                    fontWeight: "600",
+                    },
+                ],
+                "headline-xl": [
+                    "60px",
+                    {
+                    lineHeight: "72px",
+                    letterSpacing: "-0.02em",
+                    fontWeight: "700",
+                    },
+                ],
+                "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+                },
+            },
+            },
+        };
+        </script>
         <style>
-            body{
-            font-family:'Poppins',sans-serif;
-            }
-
-            .floating{
-            animation:floating 4s ease-in-out infinite;
-            }
-
-            @keyframes floating{
-            0%{
-                transform:translateY(0px);
-            }
-            50%{
-                transform:translateY(-12px);
-            }
-            100%{
-                transform:translateY(0px);
-            }
-            }
-
-            .fade-up{
-            animation:fadeUp 1s ease;
-            }
-
-            @keyframes fadeUp{
-            from{
-                opacity:0;
-                transform:translateY(30px);
-            }
-            to{
-                opacity:1;
-                transform:translateY(0);
-            }
-            }
-
-            .glass{
-            background:rgba(255,255,255,0.08);
-            backdrop-filter:blur(10px);
-            border:1px solid rgba(255,255,255,0.1);
-            }
+        .material-symbols-outlined {
+            font-variation-settings:
+            "FILL" 0,
+            "wght" 400,
+            "GRAD" 0,
+            "opsz" 24;
+        }
+        .impact-card-image {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(9, 20, 38, 0.7), rgba(9, 20, 38, 0.4));
+        }
         </style>
     </head>
-    <body class="bg-slate-100 text-slate-800 overflow-x-hidden">
-
-                <!-- NAVBAR -->
-        <nav class="absolute top-0 left-0 w-full z-50">
-            <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex items-center justify-between">
-
-                <!-- Logo -->
-                <div class="font-bold text-xl text-cyan-400">
-                    Toko Digital
-                </div>
-
-                <!-- Menu -->
-                <div class="flex items-center gap-8 text-white/80">
-                    <a href="index.html" class="hover:text-white transition">Home</a>
-                    <a href="products.html" class="hover:text-white transition">Produk</a>
-                </div>
-
+    <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+        <nav
+        class="fixed top-0 w-full z-50 shadow-[0px_4px_20px_rgba(30,41,59,0.05)] bg-surface"
+        >
+        <div
+            class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto"
+        >
+            <div class="font-headline-md text-headline-md font-bold text-primary">
+            Donasi Kemanusiaan
             </div>
+            <div class="hidden md:flex gap-8 items-center">
+            <a
+                class="font-label-bold text-label-bold text-secondary border-b-2 border-secondary pb-1"
+                href="#home"
+                >Home</a
+            >
+            <a
+                class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200"
+                href="#mission"
+                >Our Mission</a
+            >
+            <a
+                class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200"
+                href="#impact"
+                >Impact Reports</a
+            >
+            <a
+                class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200"
+                href="#transparency"
+                >Transparency</a
+            >
+            </div>
+            <a
+                href="https://saweria.co/gemamaulana" target="_blank"
+            class="bg-warm-orange text-white px-6 py-2 rounded-lg font-label-bold text-label-bold hover:scale-105 active:scale-95 transition-all"
+            >
+            Donate Now
+            </a>
+        </div>
         </nav>
-        <!-- HERO -->
-        <section class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-900">
-
-            <!-- Glow -->
-            <div class="absolute top-0 left-0 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
-
-            <div class="relative max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28">
-
-            <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-                <!-- TEXT -->
-                <div class="fade-up">
-
-                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-white mb-6">
-                    🚀 Landing Page Modern
-                </span>
-
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                    Toko Digital
-                    <span class="text-cyan-400">
-                    Modern &
-                    Profesional
-                    </span>
-                </h1>
-
-                <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl">
-                    Jual produk Anda dengan tampilan premium,
-                    modern, responsive, dan tombol pesan langsung
-                    ke Saweria.
+        <section class="relative min-h-screen flex items-center pt-20" id="home">
+        <div class="absolute inset-0 z-0">
+            <img
+            class="w-full h-full object-cover"
+            data-alt="A heart-stirring, cinematic photograph of a volunteer smiling warmly while handing a package to a young child in a sun-drenched, rustic outdoor setting. The lighting is golden and soft, emphasizing hope and urgent empathy. The overall aesthetic is professional and modern, using a color palette of deep navy and warm orange accents to highlight the humanitarian mission of the organization. The mood is deeply emotional and inspiring."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT3pn3G5dHh3UZnrzPv3Uh2nhV4CIyo_9yUYayPbW89cOlt9Bsv5ST68tD_3HTqadNjYUU9z3ZUAkGcbbu0TdHYID5T5VwiS4iDrpMsxiuamIhcTRFcc-aZ-qM0g7ZwckOiuFyYPep8PieL8OuqS4U_OUh8OLQbkc06DF8JpPXuHxZ7weyD_RKqWDvI7jYf0pmb8EWfouCF3jF0r74-GWDzE4imFaob6p_9-KUlwOHWSNj-FhOKMOrvQkw3iJwLXicWL9P5LLvDfc"
+            />
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div
+            class="relative z-10 px-gutter max-w-container-max mx-auto w-full text-white"
+        >
+            <div class="max-w-2xl">
+            <h1
+                class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-stack-md leading-tight"
+            >
+                Ulurkan Tangan,<br />Beri Harapan
+            </h1>
+            <p
+                class="font-body-lg text-body-lg mb-stack-lg text-surface-container-highest"
+            >
+                Setiap kontribusi Anda adalah nafas baru bagi mereka yang
+                membutuhkan. Bersama, kita wujudkan perubahan nyata di seluruh
+                dunia.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a
+                href="https://saweria.co/gemamaulana" target="_blank"
+                class="bg-warm-orange text-white px-8 py-4 rounded-lg font-label-bold text-label-bold hover:scale-105 active:scale-95 transition-all"
+                >
+                Donasi Sekarang
+                </a>
+                <button
+                class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-label-bold text-label-bold hover:bg-white/20 transition-all"
+                >
+                Pelajari Lebih Lanjut
+                </button>
+            </div>
+            </div>
+        </div>
+        </section>
+        <section class="py-stack-xl bg-white" id="mission">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg text-center">
+            <div
+                class="p-stack-lg rounded-xl transition-transform hover:-translate-y-2"
+            >
+                <div
+                class="text-warm-orange font-headline-xl text-headline-xl mb-stack-sm"
+                >
+                10rb+
+                </div>
+                <div
+                class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider"
+                >
+                Penerima Manfaat
+                </div>
+            </div>
+            <div
+                class="p-stack-lg rounded-xl transition-transform hover:-translate-y-2"
+            >
+                <div
+                class="text-primary font-headline-xl text-headline-xl mb-stack-sm"
+                >
+                50+
+                </div>
+                <div
+                class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider"
+                >
+                Wilayah Terjangkau
+                </div>
+            </div>
+            <div
+                class="p-stack-lg rounded-xl transition-transform hover:-translate-y-2"
+            >
+                <div
+                class="text-warm-orange font-headline-xl text-headline-xl mb-stack-sm"
+                >
+                100%
+                </div>
+                <div
+                class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider"
+                >
+                Transparan
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+        <section class="py-stack-xl bg-surface-container-low" id="impact">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="flex justify-between items-end mb-stack-lg">
+            <div>
+                <h2 class="font-headline-lg text-headline-lg text-primary">
+                Kampanye Pilihan
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Bantu mereka yang sangat membutuhkan perhatian kita hari ini.
                 </p>
-
-                <div class="flex flex-wrap gap-4">
-                    <a
-                    href="https://saweria.co/gemamaulana"
-                    target="_blank"
-                    class="px-7 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-600 text-white font-semibold shadow-2xl shadow-cyan-500/30 transition duration-300 hover:-translate-y-1"
-                    >
-                    Pesan Sekarang
-                    </a>
-
-                    <a
-                    href="#produk"
-                    class="px-7 py-4 rounded-2xl border border-white/20 text-white hover:bg-white/10 transition duration-300"
-                    >
-                    Lihat Produk
-                    </a>
-                </div>
-
-                </div>
-
-                <!-- IMAGE -->
-                <div class="relative flex justify-center fade-up">
-
-                <div class="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full"></div>
-
+            </div>
+            <button
+                class="hidden md:flex items-center gap-2 text-primary font-label-bold text-label-bold hover:gap-3 transition-all"
+            >
+                Lihat Semua
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+            <div
+                class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(30,41,59,0.05)] hover:shadow-[0px_10px_30px_rgba(30,41,59,0.08)] transition-all overflow-hidden group"
+            >
+                <div class="h-64 overflow-hidden">
                 <img
-                    src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
-                    alt="Shopping"
-                    class="relative w-full max-w-lg floating drop-shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
+                    class="w-full h-full object-cover impact-card-image group-hover:scale-110 transition-transform duration-500"
+                    data-alt="A professional, high-resolution photo of a relief worker distributing nutritious food packages in a community center. The scene is bright and optimistic, with a focus on high-quality ingredients and the dignified interactions between volunteers and recipients. The visual style follows a modern corporate aesthetic with clean lines, soft natural lighting, and a palette of whites, deep navies, and warm accent oranges."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2uyVzdt3iHW9u-pdOx2YM8IPwnLAyd6o4SkNaaza7x36LaUlX22pobEe4mcH24kayfGgzqT8l4aIN48psEearkrhUcOhTRDftqSzgS6b1IUu2BsKFCo0HISt6M4WcW_edbhMIgOfGckMBBF94oBU9hSm65b4YQaeJjTwV1ZW1PrtvgdKAzM__0Qr2VSfMYp2Gu5SL5jiMfHuUS3oLERM8Ct9AxVdJRAv8VHqASDqE274d1bGXtRpVuL1cqvMAMlztD8LZrvhrhDs"
                 />
                 </div>
-
-            </div>
-            </div>
-        </section>
-
-        <!-- PRODUCT SECTION -->
-        <!-- PRODUCT SECTION -->
-        <section id="produk" class="relative py-20">
-
-            <div class="max-w-7xl mx-auto px-6 lg:px-10">
-
-                <!-- TITLE -->
-                <div class="text-center mb-14 fade-up">
-
-                    <span class="text-blue-600 font-semibold uppercase tracking-widest text-sm">
-                    Produk Unggulan
-                    </span>
-
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mt-3">
-                    Produk Terlaris
-                    </h2>
-
-                    <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
-                    Produk pilihan dengan kualitas premium dan performa tinggi
-                    untuk kebutuhan kerja dan gaming terbaik Anda.
-                    </p>
-                </div>
-
-                <!-- GRID -->
-                <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
-
-                    <!-- PRODUCT 1 -->
-                    <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3 fade-up">
-
-                        <div class="overflow-hidden">
-                            <img
-                            src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?q=80&w=1200&auto=format&fit=crop"
-                            alt="Laptop Gaming"
-                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
-                            />
-                        </div>
-
-                        <div class="p-7">
-
-                            <h3 class="text-2xl font-bold text-slate-900 mb-3">
-                            Laptop Gaming
-                            </h3>
-
-                            <div class="text-3xl font-extrabold text-cyan-600 mb-4">
-                            Rp 12.999.000
-                            </div>
-
-                            <p class="text-slate-500 leading-relaxed mb-6">
-                            Laptop gaming bertenaga tinggi dengan GPU kuat,
-                            cocok untuk gaming dan editing berat.
-                            </p>
-
-                            <a
-                            href="https://saweria.co/gemamaulana"
-                            target="_blank"
-                            class="inline-flex items-center justify-center w-full py-4 rounded-2xl bg-slate-900 hover:bg-blue-700 text-white font-semibold transition duration-300"
-                            >
-                            Pesan Produk
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <!-- PRODUCT 2 -->
-                    <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3 fade-up">
-
-                        <div class="overflow-hidden">
-                            <img
-                            src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop"
-                            alt="Ultrabook"
-                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
-                            />
-                        </div>
-
-                        <div class="p-7">
-
-                            <h3 class="text-2xl font-bold text-slate-900 mb-3">
-                            Laptop Ultrabook
-                            </h3>
-
-                            <div class="text-3xl font-extrabold text-cyan-600 mb-4">
-                            Rp 9.499.000
-                            </div>
-
-                            <p class="text-slate-500 leading-relaxed mb-6">
-                            Laptop tipis dan ringan dengan performa cepat,
-                            ideal untuk kerja dan mobilitas tinggi.
-                            </p>
-
-                            <a
-                            href="https://saweria.co/gemamaulana"
-                            target="_blank"
-                            class="inline-flex items-center justify-center w-full py-4 rounded-2xl bg-slate-900 hover:bg-blue-700 text-white font-semibold transition duration-300"
-                            >
-                            Pesan Produk
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <!-- PRODUCT 3 -->
-                    <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3 fade-up">
-
-                        <div class="overflow-hidden">
-                            <img
-                            src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=1200&auto=format&fit=crop"
-                            alt="PC Desktop"
-                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
-                            />
-                        </div>
-
-                        <div class="p-7">
-
-                            <h3 class="text-2xl font-bold text-slate-900 mb-3">
-                            PC Desktop Gaming
-                            </h3>
-
-                            <div class="text-3xl font-extrabold text-cyan-600 mb-4">
-                            Rp 15.999.000
-                            </div>
-
-                            <p class="text-slate-500 leading-relaxed mb-6">
-                            Komputer desktop performa tinggi untuk gaming,
-                            rendering, dan pekerjaan profesional.
-                            </p>
-
-                            <a
-                            href="https://saweria.co/gemamaulana"
-                            target="_blank"
-                            class="inline-flex items-center justify-center w-full py-4 rounded-2xl bg-slate-900 hover:bg-blue-700 text-white font-semibold transition duration-300"
-                            >
-                            Pesan Produk
-                            </a>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="px-6 pb-20">
-            <div class="max-w-6xl mx-auto">
-
-            <div class="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-blue-700 to-indigo-900 p-10 lg:p-16 text-center text-white">
-
-                <div class="absolute -top-20 -right-20 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl"></div>
-
-                <h2 class="text-3xl lg:text-5xl font-extrabold mb-6">
-                Mulai Jual Produk Anda Sekarang
-                </h2>
-
-                <p class="text-slate-200 max-w-2xl mx-auto mb-8 text-lg">
-                Landing page modern, cepat, responsive,
-                dan siap meningkatkan penjualan Anda.
-                </p>
-
-                <a
-                href="products.html"
-                target="_blank"
-                class="inline-flex px-8 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-600 text-white font-bold transition duration-300 hover:scale-105"
+                <div class="p-stack-lg">
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">
+                    Bantuan Pangan
+                </h3>
+                <p
+                    class="font-body-md text-body-md text-on-surface-variant mb-stack-md"
                 >
-                Lihat Semua Produk
+                    Menyediakan paket nutrisi untuk keluarga di wilayah terdampak
+                    krisis pangan.
+                </p>
+                <div
+                    class="mb-stack-sm flex justify-between font-label-bold text-label-bold"
+                >
+                    <span class="text-warm-orange">Rp 750jt terkumpul</span>
+                    <span class="text-on-surface-variant">75%</span>
+                </div>
+                <div
+                    class="w-full bg-surface-container-highest h-2 rounded-full mb-stack-lg overflow-hidden"
+                >
+                    <div class="bg-warm-orange h-full rounded-full w-3/4"></div>
+                </div>
+                <a
+                    href="https://saweria.co/gemamaulana" target="_blank"
+                    class="w-full bg-deep-navy text-white py-3 rounded-lg font-label-bold text-label-bold hover:bg-primary transition-colors px-3"
+                >
+                    Donasi Sekarang
                 </a>
-
+                </div>
+            </div>
+            <div
+                class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(30,41,59,0.05)] hover:shadow-[0px_10px_30px_rgba(30,41,59,0.08)] transition-all overflow-hidden group"
+            >
+                <div class="h-64 overflow-hidden">
+                <img
+                    class="w-full h-full object-cover impact-card-image group-hover:scale-110 transition-transform duration-500"
+                    data-alt="An evocative, high-quality image of clean water flowing from a newly installed community tap in a rural village. Children are laughing in the background, out of focus. The lighting is crisp and clear, symbolizing transparency and institutional trust. The composition uses a modern, minimalist layout with a focus on life-changing technology and human impact, utilizing a professional color palette of blue and orange."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO3Lqt6zzNNmr8sG0nXzaZu7eltjaTqFpOHSQP-XUgJwsV89ilZ5ne8NPxKUnqY_9ACXfLGNX3LUd5ENlmrgxElEyWC-P1pOdZrPpoufQ4hTcjsraJ67m-Uwr5XZGTYUF05yuC-N1XXRbarlNxislk5eClUan1Wr0QAcqVbBgU9xJTgYBD2x45IHar9r-HvxTuYwBsegLB9o56id5ta1Ta41CQq3UCHxlLlPL-vD-B6z3-GkqKFxXnNJRGfeVxaCLwAKRx0r2OqTY"
+                />
+                </div>
+                <div class="p-stack-lg">
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">
+                    Fasilitas Air Bersih
+                </h3>
+                <p
+                    class="font-body-md text-body-md text-on-surface-variant mb-stack-md"
+                >
+                    Pembangunan sumur bor dan sistem filtrasi air untuk 20 desa
+                    pelosok.
+                </p>
+                <div
+                    class="mb-stack-sm flex justify-between font-label-bold text-label-bold"
+                >
+                    <span class="text-warm-orange">Rp 420jt terkumpul</span>
+                    <span class="text-on-surface-variant">42%</span>
+                </div>
+                <div
+                    class="w-full bg-surface-container-highest h-2 rounded-full mb-stack-lg overflow-hidden"
+                >
+                    <div class="bg-warm-orange h-full rounded-full w-[42%]"></div>
+                </div>
+                <a
+                    class="w-full bg-deep-navy text-white py-3 rounded-lg font-label-bold text-label-bold hover:bg-primary transition-colors px-3"
+                    href="https://saweria.co/gemamaulana"
+                    target="_blank"
+                >
+                    Donasi Sekarang
+                </a>
+                </div>
+            </div>
+            <div
+                class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(30,41,59,0.05)] hover:shadow-[0px_10px_30px_rgba(30,41,59,0.08)] transition-all overflow-hidden group"
+            >
+                <div class="h-64 overflow-hidden">
+                <img
+                    class="w-full h-full object-cover impact-card-image group-hover:scale-110 transition-transform duration-500"
+                    data-alt="A beautiful, high-quality photograph of children studying in a bright, modern classroom filled with books and learning tools. The atmosphere is serene and focused, representing institutional trust and urgent empathy through education. The lighting is soft and natural, emphasizing a bright future. The image has a modern corporate aesthetic, using a clean color palette that integrates seamlessly with a high-end charity website."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu8DM2t4SQCIHbC4AGfCAuFzLOdINpC_p1pXkKz5z72eoW8kiW62X6Dg4Ub-eSXML9Hv6EO-PNzHkmsoHCZWzzI8iaGs6beNEi3WalalrIwhRVERAXeajoEVZ-yoCTARcc28GvEwf2Bww-hCaYRG_So8i4Zx0ZNzzrVDAYXSmePXH83-RWCWxn7jlPr0epaBZtQN0HGnWGAEl0ysyG3cQn3CXEF1oE-Ng2zO1Z2KjlUNgUSLXeeqdTysRZY-ZtHM4YMP5d9_Njlf4"
+                />
+                </div>
+                <div class="p-stack-lg">
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">
+                    Pendidikan Anak Yatim
+                </h3>
+                <p
+                    class="font-body-md text-body-md text-on-surface-variant mb-stack-md"
+                >
+                    Beasiswa penuh dan peralatan sekolah untuk masa depan 500 anak
+                    yatim.
+                </p>
+                <div
+                    class="mb-stack-sm flex justify-between font-label-bold text-label-bold"
+                >
+                    <span class="text-warm-orange">Rp 890jt terkumpul</span>
+                    <span class="text-on-surface-variant">89%</span>
+                </div>
+                <div
+                    class="w-full bg-surface-container-highest h-2 rounded-full mb-stack-lg overflow-hidden"
+                >
+                    <div class="bg-warm-orange h-full rounded-full w-[89%]"></div>
+                </div>
+                <a
+                    class="w-full bg-deep-navy text-white py-3 rounded-lg font-label-bold text-label-bold hover:bg-primary transition-colors px-3"
+                    href="https://saweria.co/gemamaulana"
+                    target="_blank"
+                >
+                    Donasi Sekarang
+                </a>
+                </div>
             </div>
             </div>
+        </div>
         </section>
-
-        <!-- FOOTER -->
-        <footer class="bg-slate-950 py-8 text-center text-slate-400">
-            <p>
-            © 2026 Toko Digital Premium | Powered by Saweria
+        <section class="py-stack-xl bg-white">
+        <div class="max-w-container-max mx-auto px-gutter text-center">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg">
+            Cara Kerja
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg relative">
+            <div
+                class="hidden md:block absolute top-1/4 left-1/4 right-1/4 h-0.5 bg-surface-container-highest -z-10"
+            ></div>
+            <div class="flex flex-col items-center">
+                <div
+                class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-headline-md mb-stack-md relative shadow-lg"
+                >
+                <span class="material-symbols-outlined">volunteer_activism</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">
+                Pilih Program
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                Tentukan kampanye sosial yang paling dekat dengan hati Anda.
+                </p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div
+                class="w-16 h-16 bg-warm-orange text-white rounded-full flex items-center justify-center font-headline-md mb-stack-md relative shadow-lg"
+                >
+                <span class="material-symbols-outlined">payments</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">
+                Isi Nominal
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                Masukkan jumlah donasi sesuai keinginan, mulai dari Rp 10.000.
+                </p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div
+                class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-headline-md mb-stack-md relative shadow-lg"
+                >
+                <span class="material-symbols-outlined">verified</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">
+                Konfirmasi
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                Dapatkan laporan transparan penggunaan dana secara berkala.
+                </p>
+            </div>
+            </div>
+        </div>
+        </section>
+        <section class="py-stack-xl bg-deep-navy text-white" id="transparency">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <h2 class="font-headline-lg text-headline-lg text-center mb-stack-lg">
+            Cerita Mereka
+            </h2>
+            <div class="max-w-4xl mx-auto">
+            <div
+                class="bg-white/5 border border-white/10 p-stack-lg md:p-stack-xl rounded-2xl relative"
+            >
+                <span
+                class="material-symbols-outlined text-6xl text-warm-orange/30 absolute top-4 left-4"
+                >format_quote</span
+                >
+                <p
+                class="font-headline-md text-headline-md italic mb-stack-lg relative z-10"
+                >
+                "Bantuan ini bukan sekadar paket makanan, tapi bukti bahwa kami
+                tidak dilupakan. Sekarang anak-anak saya bisa tidur tanpa rasa
+                lapar lagi. Terima kasih banyak kepada para donatur."
+                </p>
+                <div class="flex items-center gap-4">
+                <div
+                    class="w-14 h-14 rounded-full overflow-hidden bg-surface-container"
+                >
+                    <img
+                    class="w-full h-full object-cover"
+                    data-alt="A dignified, close-up portrait of an elderly man with a kind, weathered face, looking into the distance with a faint smile of gratitude. The lighting is soft and natural, emphasizing the texture of his skin and the sincerity of his expression. The style is a high-end editorial portrait, using a serene and warm color palette to evoke urgent empathy and professional trust."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKFNo0D7U0g2mmiy5sYjPuzSg1rinUqzct7Xrn3WHLsi2_5_gUJvt5v9WQvAQxO7chD9wh-FdGCZbADdSTmRN4FJOxvSt8irOTFr4e4JuIM_j7vM-CrxWm3sRbWTgy7pDWZJ7h_jCRdDwP88ezX6Eec7j5UVWDFn_CBDgjxOznj_CaKjt3mFCfA57fiORBCZ36UtruOQSpHU8WVMFQzBeQfAPomWyx7OIqk0pyH07O5DXy_F7I2zL6Sii1r7_qaAdIwF_5C7m2ujk"
+                    />
+                </div>
+                <div>
+                    <div class="font-label-bold text-label-bold">Bapak Ahmad</div>
+                    <div class="text-on-tertiary-container text-label-sm">
+                    Penerima Manfaat, Bantuan Pangan
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+        <section class="py-stack-xl bg-white">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div
+            class="bg-surface-container rounded-2xl p-stack-xl flex flex-col md:flex-row items-center justify-between gap-stack-lg"
+            >
+            <div class="max-w-xl text-center md:text-left">
+                <h2 class="font-headline-lg text-headline-lg text-primary">
+                Dapatkan Update Dampak
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Bergabunglah dengan buletin mingguan kami untuk melihat bagaimana
+                donasi Anda mengubah hidup.
+                </p>
+            </div>
+            <div class="w-full md:w-auto flex flex-col sm:flex-row gap-2">
+                <input
+                class="px-6 py-4 rounded-lg border-outline-variant focus:border-deep-navy focus:ring-deep-navy min-w-[300px]"
+                placeholder="Alamat Email Anda"
+                type="email"
+                />
+                <button
+                class="bg-primary text-white px-8 py-4 rounded-lg font-label-bold text-label-bold hover:scale-105 transition-all"
+                >
+                Berlangganan
+                </button>
+            </div>
+            </div>
+        </div>
+        </section>
+        <footer class="bg-tertiary text-on-tertiary w-full">
+        <div
+            class="max-w-container-max mx-auto px-gutter py-stack-xl grid grid-cols-1 md:grid-cols-4 gap-gutter"
+        >
+            <div class="flex flex-col gap-stack-md">
+            <div class="font-headline-md text-headline-md font-bold">
+                Donasi Kemanusiaan
+            </div>
+            <p class="font-body-md text-on-tertiary-container">
+                Membangun dunia yang lebih baik melalui transparansi dan kasih
+                sayang tanpa batas. Setiap langkah kecil berarti.
             </p>
+            <div class="flex gap-4">
+                <a
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-warm-orange transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-sm">share</span></a
+                >
+                <a
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-warm-orange transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-sm">public</span></a
+                >
+                <a
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-warm-orange transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-sm">mail</span></a
+                >
+            </div>
+            </div>
+            <div>
+            <h4
+                class="font-label-bold text-label-bold text-white mb-stack-md uppercase tracking-wider"
+            >
+                Tautan Cepat
+            </h4>
+            <ul
+                class="flex flex-col gap-2 font-body-md text-on-tertiary-container"
+            >
+                <li>
+                <a class="hover:text-white transition-colors" href="#"
+                    >Tentang Kami</a
+                >
+                </li>
+                <li>
+                <a class="hover:text-white transition-colors" href="#"
+                    >Program Donasi</a
+                >
+                </li>
+                <li>
+                <a class="hover:text-white transition-colors" href="#"
+                    >Laporan Tahunan</a
+                >
+                </li>
+                <li>
+                <a class="hover:text-white transition-colors" href="#"
+                    >Artikel &amp; Berita</a
+                >
+                </li>
+            </ul>
+            </div>
+            <div>
+            <h4
+                class="font-label-bold text-label-bold text-white mb-stack-md uppercase tracking-wider"
+            >
+                Dukungan
+            </h4>
+            <ul
+                class="flex flex-col gap-2 font-body-md text-on-tertiary-container"
+            >
+                <li>
+                <a class="hover:text-white transition-colors" href="#"
+                    >Pusat Bantuan</a
+                >
+                </li>
+                <li>
+                <a class="hover:text-white transition-colors" href="#"
+                    >Kebijakan Privasi</a
+                >
+                </li>
+                <li>
+                <a class="hover:text-white transition-colors" href="#"
+                    >Syarat &amp; Ketentuan</a
+                >
+                </li>
+                <li>
+                <a class="hover:text-white transition-colors" href="#"
+                    >Kontak Kami</a
+                >
+                </li>
+            </ul>
+            </div>
+            <div>
+            <h4
+                class="font-label-bold text-label-bold text-white mb-stack-md uppercase tracking-wider"
+            >
+                Kontak Kami
+            </h4>
+            <div
+                class="flex flex-col gap-4 font-body-md text-on-tertiary-container"
+            >
+                <div class="flex gap-3">
+                <span class="material-symbols-outlined text-warm-orange"
+                    >location_on</span
+                >
+                <span>Jl. Kemanusiaan No. 123, Tembilahan Kota, 29781</span>
+                </div>
+                <div class="flex gap-3">
+                <span class="material-symbols-outlined text-warm-orange"
+                    >call</span
+                >
+                <span>(021) 1234-5678</span>
+                </div>
+                <div class="flex gap-3">
+                <span class="material-symbols-outlined text-warm-orange"
+                    >mail</span
+                >
+                <span>info@Donasi Kemanusiaan.id</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div
+            class="max-w-container-max mx-auto px-gutter py-stack-md border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-label-sm text-on-tertiary-container"
+        >
+            <div>
+            © 2024 Donasi Kemanusiaan International. All rights reserved. Registered
+            501(c)(3) nonprofit.
+            </div>
+            <div class="flex gap-6">
+            <a class="hover:text-white" href="#">Privacy Policy</a>
+            <a class="hover:text-white" href="#">Terms of Service</a>
+            </div>
+        </div>
         </footer>
-
     </body>
 </html>

@@ -1,694 +1,1273 @@
 <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<html class="light" lang="id">
-    <head>
-        <meta charset="utf-8" />
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <title>Donasi Kemanusiaan - Ulurkan Tangan, Beri Harapan</title>
-        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-        <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        rel="stylesheet"
-        />
-        <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet"
-        />
-        <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet"
-        />
-        <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-            extend: {
-                colors: {
-                "surface-bright": "#f7f9fb",
-                "on-tertiary-container": "#888fa7",
-                "primary-fixed-dim": "#bcc7de",
-                "on-secondary": "#ffffff",
-                "on-secondary-fixed-variant": "#653e00",
-                "surface-tint": "#545f73",
-                "on-background": "#191c1e",
-                error: "#ba1a1a",
-                "on-tertiary-fixed": "#131b2e",
-                "on-tertiary-fixed-variant": "#3f465c",
-                "tertiary-container": "#20283c",
-                "primary-container": "#1e293b",
-                surface: "#f7f9fb",
-                "primary-fixed": "#d8e3fb",
-                "error-container": "#ffdad6",
-                "inverse-on-surface": "#eff1f3",
-                outline: "#75777d",
-                "on-primary-container": "#8590a6",
-                secondary: "#855300",
-                "on-surface-variant": "#45474c",
-                "inverse-surface": "#2d3133",
-                background: "#f7f9fb",
-                "surface-container-lowest": "#ffffff",
-                "on-primary": "#ffffff",
-                "on-error": "#ffffff",
-                tertiary: "#0b1426",
-                "on-primary-fixed": "#111c2d",
-                primary: "#091426",
-                "on-surface": "#191c1e",
-                "surface-container-highest": "#e0e3e5",
-                "surface-container-high": "#e6e8ea",
-                "tertiary-fixed-dim": "#bec6e0",
-                "secondary-container": "#fea619",
-                "on-secondary-fixed": "#2a1700",
-                "on-secondary-container": "#684000",
-                "secondary-fixed": "#ffddb8",
-                "outline-variant": "#c5c6cd",
-                "secondary-fixed-dim": "#ffb95f",
-                "surface-variant": "#e0e3e5",
-                "surface-dim": "#d8dadc",
-                "tertiary-fixed": "#dae2fd",
-                "on-error-container": "#93000a",
-                "inverse-primary": "#bcc7de",
-                "on-tertiary": "#ffffff",
-                "surface-container": "#eceef0",
-                "surface-container-low": "#f2f4f6",
-                "on-primary-fixed-variant": "#3c475a",
-                "warm-orange": "#F59E0B",
-                "deep-navy": "#1E293B",
-                },
-                borderRadius: {
-                DEFAULT: "0.25rem",
-                lg: "0.5rem",
-                xl: "0.75rem",
-                full: "9999px",
-                },
-                spacing: {
-                gutter: "1.5rem",
-                "margin-desktop": "2rem",
-                "margin-mobile": "1rem",
-                "stack-xl": "4rem",
-                "stack-sm": "0.5rem",
-                "margin-tablet": "1.5rem",
-                "container-max": "1280px",
-                "stack-md": "1rem",
-                "stack-lg": "2rem",
-                },
-                fontFamily: {
-                "label-bold": ["Inter"],
-                "body-lg": ["Inter"],
-                "headline-md": ["Montserrat"],
-                "headline-xl-mobile": ["Montserrat"],
-                "headline-lg": ["Montserrat"],
-                "headline-xl": ["Montserrat"],
-                "body-md": ["Inter"],
-                "label-sm": ["Inter"],
-                },
-                fontSize: {
-                "label-bold": [
-                    "14px",
-                    {
-                    lineHeight: "20px",
-                    letterSpacing: "0.05em",
-                    fontWeight: "600",
-                    },
-                ],
-                "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
-                "headline-md": [
-                    "24px",
-                    { lineHeight: "32px", fontWeight: "600" },
-                ],
-                "headline-xl-mobile": [
-                    "40px",
-                    {
-                    lineHeight: "48px",
-                    letterSpacing: "-0.02em",
-                    fontWeight: "700",
-                    },
-                ],
-                "headline-lg": [
-                    "36px",
-                    {
-                    lineHeight: "44px",
-                    letterSpacing: "-0.01em",
-                    fontWeight: "600",
-                    },
-                ],
-                "headline-xl": [
-                    "60px",
-                    {
-                    lineHeight: "72px",
-                    letterSpacing: "-0.02em",
-                    fontWeight: "700",
-                    },
-                ],
-                "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
-                "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
-                },
+    <title>CV Bricket Sumatera — Premium Coconut Charcoal Briquettes</title>
+
+    <meta
+      name="description"
+      content="CV Bricket Sumatera is a premium Indonesian coconut charcoal briquette manufacturer and exporter."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              charcoal: "#252C28",
+              charcoal2: "#343D37",
+              orange: "#687D6D",
+              orangeLight: "#A8B8A8",
+              cream: "#F7F8F4",
+              soft: "#EEF2EC",
             },
+
+            fontFamily: {
+              sans: ["DM Sans", "sans-serif"],
+              display: ["Manrope", "sans-serif"],
             },
-        };
-        </script>
-        <style>
-        .material-symbols-outlined {
-            font-variation-settings:
-            "FILL" 0,
-            "wght" 400,
-            "GRAD" 0,
-            "opsz" 24;
-        }
-        .impact-card-image {
-            border-top-left-radius: 1rem;
-            border-top-right-radius: 1rem;
-        }
-        .hero-gradient {
-            background: linear-gradient(rgba(9, 20, 38, 0.7), rgba(9, 20, 38, 0.4));
-        }
-        </style>
-    </head>
-    <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
-        <nav
-        class="fixed top-0 w-full z-50 shadow-[0px_4px_20px_rgba(30,41,59,0.05)] bg-surface"
-        >
-        <div
-            class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto"
-        >
-            <div class="font-headline-md text-headline-md font-bold text-primary">
-            Donasi Kemanusiaan
+
+            backgroundImage: {
+              "hero-pattern":
+                "linear-gradient(to right, rgba(27,34,29,.68), rgba(27,34,29,.24)), url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=85')",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+      }
+
+      .font-display {
+        font-family: "Manrope", sans-serif;
+      }
+
+      .text-balance {
+        text-wrap: balance;
+      }
+
+      .product-card:hover .product-image {
+        transform: scale(1.06);
+      }
+
+      .product-image {
+        transition: transform 0.6s ease;
+      }
+
+      .process-line {
+        background: linear-gradient(
+          90deg,
+          #687d6d 0%,
+          #a8b8a8 50%,
+          #687d6d 100%
+        );
+      }
+    </style>
+  </head>
+
+  <body class="bg-cream text-neutral-900">
+    <!-- ========================================================= -->
+    <!-- NAVBAR -->
+    <!-- ========================================================= -->
+
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="h-20 flex items-center justify-between">
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-3">
+            <div
+              class="w-11 h-11 rounded-lg bg-orange flex items-center justify-center shadow-md"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M12 3v18M7 6c3 1 7 1 10 0M7 18c3-1 7-1 10 0M5 9c4 1 10 1 14 0M5 15c4-1 10-1 14 0"
+                />
+              </svg>
             </div>
-            <div class="hidden md:flex gap-8 items-center">
-            <a
-                class="font-label-bold text-label-bold text-secondary border-b-2 border-secondary pb-1"
-                href="#home"
-                >Home</a
-            >
-            <a
-                class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200"
-                href="#mission"
-                >Our Mission</a
-            >
-            <a
-                class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200"
-                href="#impact"
-                >Impact Reports</a
-            >
-            <a
-                class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200"
-                href="#transparency"
-                >Transparency</a
-            >
+
+            <div>
+              <div class="text-white font-display font-bold leading-tight">
+                CV BRICKET
+              </div>
+              <div
+                class="text-orangeLight text-[10px] font-semibold tracking-[.2em]"
+              >
+                SUMATERA
+              </div>
             </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex items-center gap-8">
             <a
-                href="https://saweria.co/gemamaulana" target="_blank"
-            class="bg-warm-orange text-white px-6 py-2 rounded-lg font-label-bold text-label-bold hover:scale-105 active:scale-95 transition-all"
+              href="#about"
+              class="text-sm text-white/80 hover:text-white transition"
             >
-            Donate Now
+              About
             </a>
+
+            <a
+              href="#products"
+              class="text-sm text-white/80 hover:text-white transition"
+            >
+              Products
+            </a>
+
+            <a
+              href="#quality"
+              class="text-sm text-white/80 hover:text-white transition"
+            >
+              Quality
+            </a>
+
+            <a
+              href="#process"
+              class="text-sm text-white/80 hover:text-white transition"
+            >
+              Process
+            </a>
+
+            <a
+              href="#contact"
+              class="text-sm text-white/80 hover:text-white transition"
+            >
+              Contact
+            </a>
+          </nav>
+
+          <!-- CTA -->
+          <a
+            href="#contact"
+            class="hidden sm:inline-flex items-center gap-2 bg-white text-neutral-900 px-5 py-3 rounded-full text-sm font-semibold hover:bg-orange hover:text-white transition"
+          >
+            Get in Touch
+
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14m-6-6 6 6-6 6"
+              />
+            </svg>
+          </a>
+
+          <!-- Mobile Button -->
+          <button
+            id="mobileMenuButton"
+            class="lg:hidden text-white"
+            aria-label="Open menu"
+          >
+            <svg
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
-        </nav>
-        <section class="relative min-h-screen flex items-center pt-20" id="home">
-        <div class="absolute inset-0 z-0">
-            <img
-            class="w-full h-full object-cover"
-            data-alt="A heart-stirring, cinematic photograph of a volunteer smiling warmly while handing a package to a young child in a sun-drenched, rustic outdoor setting. The lighting is golden and soft, emphasizing hope and urgent empathy. The overall aesthetic is professional and modern, using a color palette of deep navy and warm orange accents to highlight the humanitarian mission of the organization. The mood is deeply emotional and inspiring."
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT3pn3G5dHh3UZnrzPv3Uh2nhV4CIyo_9yUYayPbW89cOlt9Bsv5ST68tD_3HTqadNjYUU9z3ZUAkGcbbu0TdHYID5T5VwiS4iDrpMsxiuamIhcTRFcc-aZ-qM0g7ZwckOiuFyYPep8PieL8OuqS4U_OUh8OLQbkc06DF8JpPXuHxZ7weyD_RKqWDvI7jYf0pmb8EWfouCF3jF0r74-GWDzE4imFaob6p_9-KUlwOHWSNj-FhOKMOrvQkw3iJwLXicWL9P5LLvDfc"
-            />
-            <div class="absolute inset-0 hero-gradient"></div>
-        </div>
+
+        <!-- Mobile Menu -->
         <div
-            class="relative z-10 px-gutter max-w-container-max mx-auto w-full text-white"
+          id="mobileMenu"
+          class="hidden lg:hidden bg-charcoal2 rounded-xl p-5 mb-4 shadow-xl"
         >
-            <div class="max-w-2xl">
-            <h1
-                class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-stack-md leading-tight"
+          <div class="flex flex-col gap-4">
+            <a href="#about" class="text-white/80 hover:text-white"> About </a>
+
+            <a href="#products" class="text-white/80 hover:text-white">
+              Products
+            </a>
+
+            <a href="#quality" class="text-white/80 hover:text-white">
+              Quality
+            </a>
+
+            <a href="#process" class="text-white/80 hover:text-white">
+              Process
+            </a>
+
+            <a href="#contact" class="text-white/80 hover:text-white">
+              Contact
+            </a>
+
+            <a
+              href="#contact"
+              class="bg-orange text-white text-center py-3 rounded-xl font-semibold"
             >
-                Ulurkan Tangan,<br />Beri Harapan
-            </h1>
-            <p
-                class="font-body-lg text-body-lg mb-stack-lg text-surface-container-highest"
-            >
-                Setiap kontribusi Anda adalah nafas baru bagi mereka yang
-                membutuhkan. Bersama, kita wujudkan perubahan nyata di seluruh
-                dunia.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a
-                href="https://saweria.co/gemamaulana" target="_blank"
-                class="bg-warm-orange text-white px-8 py-4 rounded-lg font-label-bold text-label-bold hover:scale-105 active:scale-95 transition-all"
-                >
-                Donasi Sekarang
-                </a>
-                <button
-                class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-label-bold text-label-bold hover:bg-white/20 transition-all"
-                >
-                Pelajari Lebih Lanjut
-                </button>
-            </div>
-            </div>
+              Get in Touch
+            </a>
+          </div>
         </div>
-        </section>
-        <section class="py-stack-xl bg-white" id="mission">
-        <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg text-center">
-            <div
-                class="p-stack-lg rounded-xl transition-transform hover:-translate-y-2"
+      </div>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- HERO -->
+    <!-- ========================================================= -->
+
+    <section
+      class="min-h-screen bg-hero-pattern bg-cover bg-center relative overflow-hidden"
+    >
+      <div
+        class="relative max-w-7xl mx-auto px-5 lg:px-8 min-h-screen flex items-center"
+      >
+        <div class="max-w-4xl pt-24 pb-20">
+          <!-- Badge -->
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm mb-7"
+          >
+            <span
+              class="w-2 h-2 bg-orangeLight rounded-full animate-pulse"
+            ></span>
+
+            <span class="text-white/90 text-xs sm:text-sm font-medium">
+              Indonesian Coconut Charcoal Manufacturer & Exporter
+            </span>
+          </div>
+
+          <!-- Heading -->
+          <h1
+            class="font-display text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-[.95] tracking-tight text-balance"
+          >
+            Premium
+            <span class="text-orangeLight"> Briquettes </span>
+            from Sumatra.
+          </h1>
+
+          <p
+            class="mt-7 max-w-2xl text-lg sm:text-xl text-white/70 leading-relaxed"
+          >
+            High-quality coconut charcoal briquettes made in Indonesia, crafted
+            for global markets with consistency, care, and responsible sourcing.
+          </p>
+
+          <!-- Buttons -->
+          <div class="mt-9 flex flex-col sm:flex-row gap-4">
+            <a
+              href="#products"
+              class="inline-flex justify-center items-center gap-3 bg-orange hover:bg-orangeLight text-white px-7 py-4 rounded-full font-semibold transition shadow-xl shadow-orange/20"
             >
-                <div
-                class="text-warm-orange font-headline-xl text-headline-xl mb-stack-sm"
-                >
-                10rb+
-                </div>
-                <div
-                class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider"
-                >
-                Penerima Manfaat
-                </div>
-            </div>
-            <div
-                class="p-stack-lg rounded-xl transition-transform hover:-translate-y-2"
+              Explore Our Products
+
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 12h14m-6-6 6 6-6 6"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="#about"
+              class="inline-flex justify-center items-center gap-3 border border-white/30 hover:bg-white/10 text-white px-7 py-4 rounded-full font-semibold transition"
             >
-                <div
-                class="text-primary font-headline-xl text-headline-xl mb-stack-sm"
-                >
-                50+
-                </div>
-                <div
-                class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider"
-                >
-                Wilayah Terjangkau
-                </div>
-            </div>
-            <div
-                class="p-stack-lg rounded-xl transition-transform hover:-translate-y-2"
-            >
-                <div
-                class="text-warm-orange font-headline-xl text-headline-xl mb-stack-sm"
-                >
+              Discover Our Story
+            </a>
+          </div>
+
+          <!-- Hero Stats -->
+          <div
+            class="mt-16 pt-7 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-7"
+          >
+            <div>
+              <div
+                class="text-2xl sm:text-3xl font-display font-bold text-white"
+              >
                 100%
-                </div>
-                <div
-                class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider"
-                >
-                Transparan
-                </div>
+              </div>
+              <div class="text-white/50 text-sm mt-1">
+                Natural Coconut Shell
+              </div>
             </div>
-            </div>
-        </div>
-        </section>
-        <section class="py-stack-xl bg-surface-container-low" id="impact">
-        <div class="max-w-container-max mx-auto px-gutter">
-            <div class="flex justify-between items-end mb-stack-lg">
+
             <div>
-                <h2 class="font-headline-lg text-headline-lg text-primary">
-                Kampanye Pilihan
-                </h2>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-2">
-                Bantu mereka yang sangat membutuhkan perhatian kita hari ini.
-                </p>
+              <div
+                class="text-2xl sm:text-3xl font-display font-bold text-white"
+              >
+                5+
+              </div>
+              <div class="text-white/50 text-sm mt-1">Export Markets</div>
             </div>
-            <button
-                class="hidden md:flex items-center gap-2 text-primary font-label-bold text-label-bold hover:gap-3 transition-all"
-            >
-                Lihat Semua
-                <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
+
+            <div>
+              <div
+                class="text-2xl sm:text-3xl font-display font-bold text-white"
+              >
+                24/7
+              </div>
+              <div class="text-white/50 text-sm mt-1">Global Support</div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-            <div
-                class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(30,41,59,0.05)] hover:shadow-[0px_10px_30px_rgba(30,41,59,0.08)] transition-all overflow-hidden group"
-            >
-                <div class="h-64 overflow-hidden">
-                <img
-                    class="w-full h-full object-cover impact-card-image group-hover:scale-110 transition-transform duration-500"
-                    data-alt="A professional, high-resolution photo of a relief worker distributing nutritious food packages in a community center. The scene is bright and optimistic, with a focus on high-quality ingredients and the dignified interactions between volunteers and recipients. The visual style follows a modern corporate aesthetic with clean lines, soft natural lighting, and a palette of whites, deep navies, and warm accent oranges."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2uyVzdt3iHW9u-pdOx2YM8IPwnLAyd6o4SkNaaza7x36LaUlX22pobEe4mcH24kayfGgzqT8l4aIN48psEearkrhUcOhTRDftqSzgS6b1IUu2BsKFCo0HISt6M4WcW_edbhMIgOfGckMBBF94oBU9hSm65b4YQaeJjTwV1ZW1PrtvgdKAzM__0Qr2VSfMYp2Gu5SL5jiMfHuUS3oLERM8Ct9AxVdJRAv8VHqASDqE274d1bGXtRpVuL1cqvMAMlztD8LZrvhrhDs"
-                />
-                </div>
-                <div class="p-stack-lg">
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">
-                    Bantuan Pangan
-                </h3>
-                <p
-                    class="font-body-md text-body-md text-on-surface-variant mb-stack-md"
-                >
-                    Menyediakan paket nutrisi untuk keluarga di wilayah terdampak
-                    krisis pangan.
-                </p>
-                <div
-                    class="mb-stack-sm flex justify-between font-label-bold text-label-bold"
-                >
-                    <span class="text-warm-orange">Rp 750jt terkumpul</span>
-                    <span class="text-on-surface-variant">75%</span>
-                </div>
-                <div
-                    class="w-full bg-surface-container-highest h-2 rounded-full mb-stack-lg overflow-hidden"
-                >
-                    <div class="bg-warm-orange h-full rounded-full w-3/4"></div>
-                </div>
-                <a
-                    href="https://saweria.co/gemamaulana" target="_blank"
-                    class="w-full bg-deep-navy text-white py-3 rounded-lg font-label-bold text-label-bold hover:bg-primary transition-colors px-3"
-                >
-                    Donasi Sekarang
-                </a>
-                </div>
+
+            <div>
+              <div
+                class="text-2xl sm:text-3xl font-display font-bold text-white"
+              >
+                QC
+              </div>
+              <div class="text-white/50 text-sm mt-1">Quality Controlled</div>
             </div>
-            <div
-                class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(30,41,59,0.05)] hover:shadow-[0px_10px_30px_rgba(30,41,59,0.08)] transition-all overflow-hidden group"
-            >
-                <div class="h-64 overflow-hidden">
-                <img
-                    class="w-full h-full object-cover impact-card-image group-hover:scale-110 transition-transform duration-500"
-                    data-alt="An evocative, high-quality image of clean water flowing from a newly installed community tap in a rural village. Children are laughing in the background, out of focus. The lighting is crisp and clear, symbolizing transparency and institutional trust. The composition uses a modern, minimalist layout with a focus on life-changing technology and human impact, utilizing a professional color palette of blue and orange."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO3Lqt6zzNNmr8sG0nXzaZu7eltjaTqFpOHSQP-XUgJwsV89ilZ5ne8NPxKUnqY_9ACXfLGNX3LUd5ENlmrgxElEyWC-P1pOdZrPpoufQ4hTcjsraJ67m-Uwr5XZGTYUF05yuC-N1XXRbarlNxislk5eClUan1Wr0QAcqVbBgU9xJTgYBD2x45IHar9r-HvxTuYwBsegLB9o56id5ta1Ta41CQq3UCHxlLlPL-vD-B6z3-GkqKFxXnNJRGfeVxaCLwAKRx0r2OqTY"
-                />
-                </div>
-                <div class="p-stack-lg">
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">
-                    Fasilitas Air Bersih
-                </h3>
-                <p
-                    class="font-body-md text-body-md text-on-surface-variant mb-stack-md"
-                >
-                    Pembangunan sumur bor dan sistem filtrasi air untuk 20 desa
-                    pelosok.
-                </p>
-                <div
-                    class="mb-stack-sm flex justify-between font-label-bold text-label-bold"
-                >
-                    <span class="text-warm-orange">Rp 420jt terkumpul</span>
-                    <span class="text-on-surface-variant">42%</span>
-                </div>
-                <div
-                    class="w-full bg-surface-container-highest h-2 rounded-full mb-stack-lg overflow-hidden"
-                >
-                    <div class="bg-warm-orange h-full rounded-full w-[42%]"></div>
-                </div>
-                <a
-                    class="w-full bg-deep-navy text-white py-3 rounded-lg font-label-bold text-label-bold hover:bg-primary transition-colors px-3"
-                    href="https://saweria.co/gemamaulana"
-                    target="_blank"
-                >
-                    Donasi Sekarang
-                </a>
-                </div>
-            </div>
-            <div
-                class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(30,41,59,0.05)] hover:shadow-[0px_10px_30px_rgba(30,41,59,0.08)] transition-all overflow-hidden group"
-            >
-                <div class="h-64 overflow-hidden">
-                <img
-                    class="w-full h-full object-cover impact-card-image group-hover:scale-110 transition-transform duration-500"
-                    data-alt="A beautiful, high-quality photograph of children studying in a bright, modern classroom filled with books and learning tools. The atmosphere is serene and focused, representing institutional trust and urgent empathy through education. The lighting is soft and natural, emphasizing a bright future. The image has a modern corporate aesthetic, using a clean color palette that integrates seamlessly with a high-end charity website."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu8DM2t4SQCIHbC4AGfCAuFzLOdINpC_p1pXkKz5z72eoW8kiW62X6Dg4Ub-eSXML9Hv6EO-PNzHkmsoHCZWzzI8iaGs6beNEi3WalalrIwhRVERAXeajoEVZ-yoCTARcc28GvEwf2Bww-hCaYRG_So8i4Zx0ZNzzrVDAYXSmePXH83-RWCWxn7jlPr0epaBZtQN0HGnWGAEl0ysyG3cQn3CXEF1oE-Ng2zO1Z2KjlUNgUSLXeeqdTysRZY-ZtHM4YMP5d9_Njlf4"
-                />
-                </div>
-                <div class="p-stack-lg">
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">
-                    Pendidikan Anak Yatim
-                </h3>
-                <p
-                    class="font-body-md text-body-md text-on-surface-variant mb-stack-md"
-                >
-                    Beasiswa penuh dan peralatan sekolah untuk masa depan 500 anak
-                    yatim.
-                </p>
-                <div
-                    class="mb-stack-sm flex justify-between font-label-bold text-label-bold"
-                >
-                    <span class="text-warm-orange">Rp 890jt terkumpul</span>
-                    <span class="text-on-surface-variant">89%</span>
-                </div>
-                <div
-                    class="w-full bg-surface-container-highest h-2 rounded-full mb-stack-lg overflow-hidden"
-                >
-                    <div class="bg-warm-orange h-full rounded-full w-[89%]"></div>
-                </div>
-                <a
-                    class="w-full bg-deep-navy text-white py-3 rounded-lg font-label-bold text-label-bold hover:bg-primary transition-colors px-3"
-                    href="https://saweria.co/gemamaulana"
-                    target="_blank"
-                >
-                    Donasi Sekarang
-                </a>
-                </div>
-            </div>
-            </div>
+          </div>
         </div>
-        </section>
-        <section class="py-stack-xl bg-white">
-        <div class="max-w-container-max mx-auto px-gutter text-center">
-            <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg">
-            Cara Kerja
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg relative">
-            <div
-                class="hidden md:block absolute top-1/4 left-1/4 right-1/4 h-0.5 bg-surface-container-highest -z-10"
-            ></div>
-            <div class="flex flex-col items-center">
-                <div
-                class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-headline-md mb-stack-md relative shadow-lg"
-                >
-                <span class="material-symbols-outlined">volunteer_activism</span>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">
-                Pilih Program
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                Tentukan kampanye sosial yang paling dekat dengan hati Anda.
-                </p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div
-                class="w-16 h-16 bg-warm-orange text-white rounded-full flex items-center justify-center font-headline-md mb-stack-md relative shadow-lg"
-                >
-                <span class="material-symbols-outlined">payments</span>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">
-                Isi Nominal
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                Masukkan jumlah donasi sesuai keinginan, mulai dari Rp 10.000.
-                </p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div
-                class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-headline-md mb-stack-md relative shadow-lg"
-                >
-                <span class="material-symbols-outlined">verified</span>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">
-                Konfirmasi
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                Dapatkan laporan transparan penggunaan dana secara berkala.
-                </p>
-            </div>
-            </div>
-        </div>
-        </section>
-        <section class="py-stack-xl bg-deep-navy text-white" id="transparency">
-        <div class="max-w-container-max mx-auto px-gutter">
-            <h2 class="font-headline-lg text-headline-lg text-center mb-stack-lg">
-            Cerita Mereka
-            </h2>
-            <div class="max-w-4xl mx-auto">
-            <div
-                class="bg-white/5 border border-white/10 p-stack-lg md:p-stack-xl rounded-2xl relative"
-            >
-                <span
-                class="material-symbols-outlined text-6xl text-warm-orange/30 absolute top-4 left-4"
-                >format_quote</span
-                >
-                <p
-                class="font-headline-md text-headline-md italic mb-stack-lg relative z-10"
-                >
-                "Bantuan ini bukan sekadar paket makanan, tapi bukti bahwa kami
-                tidak dilupakan. Sekarang anak-anak saya bisa tidur tanpa rasa
-                lapar lagi. Terima kasih banyak kepada para donatur."
-                </p>
-                <div class="flex items-center gap-4">
-                <div
-                    class="w-14 h-14 rounded-full overflow-hidden bg-surface-container"
-                >
-                    <img
-                    class="w-full h-full object-cover"
-                    data-alt="A dignified, close-up portrait of an elderly man with a kind, weathered face, looking into the distance with a faint smile of gratitude. The lighting is soft and natural, emphasizing the texture of his skin and the sincerity of his expression. The style is a high-end editorial portrait, using a serene and warm color palette to evoke urgent empathy and professional trust."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKFNo0D7U0g2mmiy5sYjPuzSg1rinUqzct7Xrn3WHLsi2_5_gUJvt5v9WQvAQxO7chD9wh-FdGCZbADdSTmRN4FJOxvSt8irOTFr4e4JuIM_j7vM-CrxWm3sRbWTgy7pDWZJ7h_jCRdDwP88ezX6Eec7j5UVWDFn_CBDgjxOznj_CaKjt3mFCfA57fiORBCZ36UtruOQSpHU8WVMFQzBeQfAPomWyx7OIqk0pyH07O5DXy_F7I2zL6Sii1r7_qaAdIwF_5C7m2ujk"
-                    />
-                </div>
-                <div>
-                    <div class="font-label-bold text-label-bold">Bapak Ahmad</div>
-                    <div class="text-on-tertiary-container text-label-sm">
-                    Penerima Manfaat, Bantuan Pangan
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </section>
-        <section class="py-stack-xl bg-white">
-        <div class="max-w-container-max mx-auto px-gutter">
-            <div
-            class="bg-surface-container rounded-2xl p-stack-xl flex flex-col md:flex-row items-center justify-between gap-stack-lg"
-            >
-            <div class="max-w-xl text-center md:text-left">
-                <h2 class="font-headline-lg text-headline-lg text-primary">
-                Dapatkan Update Dampak
-                </h2>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-2">
-                Bergabunglah dengan buletin mingguan kami untuk melihat bagaimana
-                donasi Anda mengubah hidup.
-                </p>
-            </div>
-            <div class="w-full md:w-auto flex flex-col sm:flex-row gap-2 min-w-0">
-                <input
-                    class="w-full sm:w-auto sm:min-w-[300px] min-w-0 px-6 py-4 rounded-lg border-outline-variant focus:border-deep-navy focus:ring-deep-navy"
-                    placeholder="Alamat Email Anda"
-                    type="email"
-                />
-                
-                <button
-                    class="bg-primary text-white px-8 py-4 rounded-lg font-label-bold text-label-bold hover:scale-105 transition-all"
-                >
-                    Berlangganan
-                </button>
-                </div>
-            </div>
-        </div>
-        </section>
-        <footer class="bg-tertiary text-on-tertiary w-full">
+      </div>
+
+      <!-- Scroll -->
+      <div
+        class="absolute bottom-7 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-white/40"
+      >
+        <span class="text-[10px] tracking-[.3em] uppercase"> Scroll </span>
+
+        <div class="w-px h-10 bg-white/30"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TRUST BAR -->
+    <!-- ========================================================= -->
+
+    <section class="bg-soft text-neutral-700">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-7">
         <div
-            class="max-w-container-max mx-auto px-gutter py-stack-xl grid grid-cols-1 md:grid-cols-4 gap-gutter"
+          class="flex flex-col md:flex-row md:items-center justify-between gap-6"
         >
-            <div class="flex flex-col gap-stack-md">
-            <div class="font-headline-md text-headline-md font-bold">
-                Donasi Kemanusiaan
+          <p class="text-neutral-500 text-sm">
+            Trusted production standards for international buyers
+          </p>
+
+          <div class="flex flex-wrap items-center gap-8">
+            <span class="text-neutral-600 text-sm font-medium">
+              Consistent Quality
+            </span>
+
+            <span class="w-1 h-1 bg-orange rounded-full"></span>
+
+            <span class="text-neutral-600 text-sm font-medium">
+              Reliable Supply
+            </span>
+
+            <span class="w-1 h-1 bg-orange rounded-full"></span>
+
+            <span class="text-neutral-600 text-sm font-medium">
+              Global Shipping
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- ABOUT -->
+    <!-- ========================================================= -->
+
+    <section id="about" class="py-24 lg:py-32 bg-cream">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+          <!-- Image -->
+          <div class="relative">
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=1000&q=80"
+                alt="Coconut charcoal production"
+                class="w-full h-full object-cover"
+              />
             </div>
-            <p class="font-body-md text-on-tertiary-container">
-                Membangun dunia yang lebih baik melalui transparansi dan kasih
-                sayang tanpa batas. Setiap langkah kecil berarti.
+
+            <!-- Floating card -->
+            <div
+              class="absolute -bottom-7 -right-3 sm:-right-7 bg-white rounded-xl p-5 sm:p-6 shadow-xl max-w-[220px]"
+            >
+              <div
+                class="w-10 h-10 bg-orange/10 text-orange rounded-xl flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M12 3l2.8 5.7L21 9.6l-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3z"
+                  />
+                </svg>
+              </div>
+
+              <div class="font-display font-bold text-neutral-900">
+                Export Ready
+              </div>
+
+              <p class="text-sm text-neutral-500 mt-1">
+                Built for international standards and requirements.
+              </p>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div>
+            <div
+              class="text-orange font-semibold text-sm uppercase tracking-[.2em] mb-5"
+            >
+              About CV Bricket Sumatera
+            </div>
+
+            <h2
+              class="font-display text-4xl sm:text-5xl font-bold leading-tight text-neutral-900"
+            >
+              From the heart of
+              <span class="text-orange"> Sumatra </span>
+              to the world.
+            </h2>
+
+            <p class="mt-7 text-neutral-600 leading-8">
+              CV Bricket Sumatera is an Indonesian manufacturer and exporter
+              specializing in premium coconut charcoal briquettes.
             </p>
-            <div class="flex gap-4">
-                <a
-                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-warm-orange transition-colors"
-                href="#"
-                ><span class="material-symbols-outlined text-sm">share</span></a
+
+            <p class="mt-5 text-neutral-600 leading-8">
+              We transform carefully selected coconut shells into
+              high-performance charcoal briquettes designed for international
+              customers who value quality, consistency, and dependable supply.
+            </p>
+
+            <!-- Features -->
+
+            <div class="mt-8 grid sm:grid-cols-2 gap-5">
+              <div class="flex gap-4">
+                <div
+                  class="shrink-0 w-11 h-11 rounded-xl bg-orange/10 text-orange flex items-center justify-center"
                 >
-                <a
-                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-warm-orange transition-colors"
-                href="#"
-                ><span class="material-symbols-outlined text-sm">public</span></a
-                >
-                <a
-                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-warm-orange transition-colors"
-                href="#"
-                ><span class="material-symbols-outlined text-sm">mail</span></a
-                >
-            </div>
-            </div>
-            <div>
-            <h4
-                class="font-label-bold text-label-bold text-white mb-stack-md uppercase tracking-wider"
-            >
-                Tautan Cepat
-            </h4>
-            <ul
-                class="flex flex-col gap-2 font-body-md text-on-tertiary-container"
-            >
-                <li>
-                <a class="hover:text-white transition-colors" href="#"
-                    >Tentang Kami</a
-                >
-                </li>
-                <li>
-                <a class="hover:text-white transition-colors" href="#"
-                    >Program Donasi</a
-                >
-                </li>
-                <li>
-                <a class="hover:text-white transition-colors" href="#"
-                    >Laporan Tahunan</a
-                >
-                </li>
-                <li>
-                <a class="hover:text-white transition-colors" href="#"
-                    >Artikel &amp; Berita</a
-                >
-                </li>
-            </ul>
-            </div>
-            <div>
-            <h4
-                class="font-label-bold text-label-bold text-white mb-stack-md uppercase tracking-wider"
-            >
-                Dukungan
-            </h4>
-            <ul
-                class="flex flex-col gap-2 font-body-md text-on-tertiary-container"
-            >
-                <li>
-                <a class="hover:text-white transition-colors" href="#"
-                    >Pusat Bantuan</a
-                >
-                </li>
-                <li>
-                <a class="hover:text-white transition-colors" href="#"
-                    >Kebijakan Privasi</a
-                >
-                </li>
-                <li>
-                <a class="hover:text-white transition-colors" href="#"
-                    >Syarat &amp; Ketentuan</a
-                >
-                </li>
-                <li>
-                <a class="hover:text-white transition-colors" href="#"
-                    >Kontak Kami</a
-                >
-                </li>
-            </ul>
-            </div>
-            <div>
-            <h4
-                class="font-label-bold text-label-bold text-white mb-stack-md uppercase tracking-wider"
-            >
-                Kontak Kami
-            </h4>
-            <div
-                class="flex flex-col gap-4 font-body-md text-on-tertiary-container"
-            >
-                <div class="flex gap-3">
-                <span class="material-symbols-outlined text-warm-orange"
-                    >location_on</span
-                >
-                <span>Jl. Kemanusiaan No. 123, Tembilahan Kota, 29781</span>
+                  ✓
                 </div>
-                <div class="flex gap-3">
-                <span class="material-symbols-outlined text-warm-orange"
-                    >call</span
-                >
-                <span>(021) 1234-5678</span>
+
+                <div>
+                  <h3 class="font-semibold">Reliable Supply</h3>
+
+                  <p class="text-sm text-neutral-500 mt-1">
+                    Consistent production capacity.
+                  </p>
                 </div>
-                <div class="flex gap-3">
-                <span class="material-symbols-outlined text-warm-orange"
-                    >mail</span
+              </div>
+
+              <div class="flex gap-4">
+                <div
+                  class="shrink-0 w-11 h-11 rounded-xl bg-orange/10 text-orange flex items-center justify-center"
                 >
-                <span>info@Donasi Kemanusiaan.id</span>
+                  ✓
                 </div>
+
+                <div>
+                  <h3 class="font-semibold">Quality Focused</h3>
+
+                  <p class="text-sm text-neutral-500 mt-1">
+                    Controlled at every stage.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div
+                  class="shrink-0 w-11 h-11 rounded-xl bg-orange/10 text-orange flex items-center justify-center"
+                >
+                  ✓
+                </div>
+
+                <div>
+                  <h3 class="font-semibold">Natural Materials</h3>
+
+                  <p class="text-sm text-neutral-500 mt-1">
+                    Selected coconut shell charcoal.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div
+                  class="shrink-0 w-11 h-11 rounded-xl bg-orange/10 text-orange flex items-center justify-center"
+                >
+                  ✓
+                </div>
+
+                <div>
+                  <h3 class="font-semibold">Global Logistics</h3>
+
+                  <p class="text-sm text-neutral-500 mt-1">
+                    Ready for international shipment.
+                  </p>
+                </div>
+              </div>
             </div>
-            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- PRODUCTS -->
+    <!-- ========================================================= -->
+
+    <section id="products" class="py-24 lg:py-32 bg-[#27312b] text-white">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <!-- Heading -->
+
         <div
-            class="max-w-container-max mx-auto px-gutter py-stack-md border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-label-sm text-on-tertiary-container"
+          class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14"
         >
-            <div>
-            © 2024 Donasi Kemanusiaan International. All rights reserved. Registered
-            501(c)(3) nonprofit.
+          <div>
+            <div
+              class="text-orangeLight font-semibold text-sm uppercase tracking-[.2em] mb-5"
+            >
+              Our Products
             </div>
-            <div class="flex gap-6">
-            <a class="hover:text-white" href="#">Privacy Policy</a>
-            <a class="hover:text-white" href="#">Terms of Service</a>
-            </div>
+
+            <h2
+              class="font-display text-4xl sm:text-5xl font-bold leading-tight"
+            >
+              Briquettes made for
+              <span class="text-orangeLight"> performance. </span>
+            </h2>
+          </div>
+
+          <p class="max-w-lg text-white/50 leading-7">
+            Our products are manufactured with carefully selected raw materials
+            and controlled production processes for consistent performance.
+          </p>
         </div>
-        </footer>
-    </body>
+
+        <!-- Products -->
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Product 1 -->
+
+          <div
+            class="product-card group rounded-xl overflow-hidden bg-charcoal2 border border-white/10"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1603905179139-db12ab5354d3?auto=format&fit=crop&w=1000&q=80"
+                alt="Coconut charcoal briquettes"
+                class="product-image w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-7">
+              <div
+                class="text-orangeLight text-xs font-semibold uppercase tracking-widest"
+              >
+                Product 01
+              </div>
+
+              <h3 class="font-display text-2xl font-bold mt-3">
+                Cube Briquettes
+              </h3>
+
+              <p class="text-white/50 leading-7 mt-3">
+                Premium coconut charcoal cubes designed for shisha and hookah
+                applications.
+              </p>
+
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-white hover:text-orangeLight transition"
+              >
+                Request Specification
+
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+
+          <div
+            class="product-card group rounded-xl overflow-hidden bg-charcoal2 border border-white/10"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1584270354949-c26b0d5b8a6f?auto=format&fit=crop&w=1000&q=80"
+                alt="Charcoal briquettes"
+                class="product-image w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-7">
+              <div
+                class="text-orangeLight text-xs font-semibold uppercase tracking-widest"
+              >
+                Product 02
+              </div>
+
+              <h3 class="font-display text-2xl font-bold mt-3">
+                Finger Briquettes
+              </h3>
+
+              <p class="text-white/50 leading-7 mt-3">
+                Uniform briquettes suitable for different charcoal applications
+                and customer specifications.
+              </p>
+
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-white hover:text-orangeLight transition"
+              >
+                Request Specification
+
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+
+          <div
+            class="product-card group rounded-xl overflow-hidden bg-charcoal2 border border-white/10"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1598514982901-ae627b3a8d6f?auto=format&fit=crop&w=1000&q=80"
+                alt="Premium coconut charcoal"
+                class="product-image w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-7">
+              <div
+                class="text-orangeLight text-xs font-semibold uppercase tracking-widest"
+              >
+                Product 03
+              </div>
+
+              <h3 class="font-display text-2xl font-bold mt-3">
+                Custom Briquettes
+              </h3>
+
+              <p class="text-white/50 leading-7 mt-3">
+                Custom shapes, sizes, packaging, and specifications according to
+                your requirements.
+              </p>
+
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-white hover:text-orangeLight transition"
+              >
+                Discuss Your Needs
+
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- QUALITY -->
+    <!-- ========================================================= -->
+
+    <section id="quality" class="py-24 lg:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="grid lg:grid-cols-[.8fr_1.2fr] gap-16 items-start">
+          <!-- Left -->
+
+          <div class="lg:sticky lg:top-32">
+            <div
+              class="text-orange font-semibold text-sm uppercase tracking-[.2em] mb-5"
+            >
+              Quality Assurance
+            </div>
+
+            <h2
+              class="font-display text-4xl sm:text-5xl font-bold leading-tight"
+            >
+              Quality you can
+              <span class="text-orange"> count on. </span>
+            </h2>
+
+            <p class="text-neutral-600 leading-8 mt-6">
+              Every batch is produced with attention to raw material selection,
+              carbonization, grinding, mixing, pressing, drying, and final
+              inspection.
+            </p>
+
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-3 mt-8 bg-neutral-900 text-white px-6 py-3.5 rounded-full font-semibold hover:bg-orange transition"
+            >
+              Talk to Our Team
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Right -->
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <!-- Card -->
+
+            <div class="p-7 rounded-xl bg-cream border border-neutral-200">
+              <div
+                class="w-12 h-12 rounded-2xl bg-orange text-white flex items-center justify-center font-bold mb-7"
+              >
+                01
+              </div>
+
+              <h3 class="font-display text-xl font-bold">Low Ash</h3>
+
+              <p class="text-neutral-500 leading-7 mt-3">
+                Carefully processed raw materials help us achieve controlled ash
+                characteristics.
+              </p>
+            </div>
+
+            <div class="p-7 rounded-xl bg-cream border border-neutral-200">
+              <div
+                class="w-12 h-12 rounded-2xl bg-orange text-white flex items-center justify-center font-bold mb-7"
+              >
+                02
+              </div>
+
+              <h3 class="font-display text-xl font-bold">High Heat</h3>
+
+              <p class="text-neutral-500 leading-7 mt-3">
+                Engineered for strong and stable heat performance across
+                different applications.
+              </p>
+            </div>
+
+            <div class="p-7 rounded-xl bg-cream border border-neutral-200">
+              <div
+                class="w-12 h-12 rounded-2xl bg-orange text-white flex items-center justify-center font-bold mb-7"
+              >
+                03
+              </div>
+
+              <h3 class="font-display text-xl font-bold">Consistent Shape</h3>
+
+              <p class="text-neutral-500 leading-7 mt-3">
+                Controlled pressing processes help maintain uniform product
+                dimensions.
+              </p>
+            </div>
+
+            <div class="p-7 rounded-xl bg-cream border border-neutral-200">
+              <div
+                class="w-12 h-12 rounded-2xl bg-orange text-white flex items-center justify-center font-bold mb-7"
+              >
+                04
+              </div>
+
+              <h3 class="font-display text-xl font-bold">
+                Controlled Moisture
+              </h3>
+
+              <p class="text-neutral-500 leading-7 mt-3">
+                Drying and storage processes are managed to support product
+                stability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- PROCESS -->
+    <!-- ========================================================= -->
+
+    <section id="process" class="py-24 lg:py-32 bg-soft">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <div
+            class="text-orange font-semibold text-sm uppercase tracking-[.2em] mb-5"
+          >
+            Our Process
+          </div>
+
+          <h2 class="font-display text-4xl sm:text-5xl font-bold">
+            From shell to
+            <span class="text-orange"> premium charcoal. </span>
+          </h2>
+
+          <p class="text-neutral-600 leading-7 mt-6">
+            A carefully managed production journey designed to maintain
+            consistency from raw material to final packaging.
+          </p>
+        </div>
+
+        <!-- Process Timeline -->
+
+        <div class="mt-16 relative">
+          <!-- Line -->
+          <div
+            class="hidden lg:block absolute top-10 left-[10%] right-[10%] h-[2px] process-line"
+          ></div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 relative">
+            <!-- 1 -->
+            <div class="text-center">
+              <div
+                class="relative mx-auto w-20 h-20 rounded-full bg-white border-4 border-orange flex items-center justify-center shadow-lg"
+              >
+                <span class="font-display font-bold text-orange"> 01 </span>
+              </div>
+
+              <h3 class="font-display font-bold text-lg mt-6">Selection</h3>
+
+              <p class="text-sm text-neutral-500 leading-6 mt-2">
+                Selected coconut shells are prepared as raw material.
+              </p>
+            </div>
+
+            <!-- 2 -->
+            <div class="text-center">
+              <div
+                class="relative mx-auto w-20 h-20 rounded-full bg-white border-4 border-orange flex items-center justify-center shadow-lg"
+              >
+                <span class="font-display font-bold text-orange"> 02 </span>
+              </div>
+
+              <h3 class="font-display font-bold text-lg mt-6">Carbonization</h3>
+
+              <p class="text-sm text-neutral-500 leading-6 mt-2">
+                Shells are processed into high-quality charcoal.
+              </p>
+            </div>
+
+            <!-- 3 -->
+            <div class="text-center">
+              <div
+                class="relative mx-auto w-20 h-20 rounded-full bg-white border-4 border-orange flex items-center justify-center shadow-lg"
+              >
+                <span class="font-display font-bold text-orange"> 03 </span>
+              </div>
+
+              <h3 class="font-display font-bold text-lg mt-6">Grinding</h3>
+
+              <p class="text-sm text-neutral-500 leading-6 mt-2">
+                Charcoal is processed into controlled particle sizes.
+              </p>
+            </div>
+
+            <!-- 4 -->
+            <div class="text-center">
+              <div
+                class="relative mx-auto w-20 h-20 rounded-full bg-white border-4 border-orange flex items-center justify-center shadow-lg"
+              >
+                <span class="font-display font-bold text-orange"> 04 </span>
+              </div>
+
+              <h3 class="font-display font-bold text-lg mt-6">Pressing</h3>
+
+              <p class="text-sm text-neutral-500 leading-6 mt-2">
+                Charcoal powder is shaped into uniform briquettes.
+              </p>
+            </div>
+
+            <!-- 5 -->
+            <div class="text-center">
+              <div
+                class="relative mx-auto w-20 h-20 rounded-full bg-white border-4 border-orange flex items-center justify-center shadow-lg"
+              >
+                <span class="font-display font-bold text-orange"> 05 </span>
+              </div>
+
+              <h3 class="font-display font-bold text-lg mt-6">Packaging</h3>
+
+              <p class="text-sm text-neutral-500 leading-6 mt-2">
+                Final products are packed and prepared for export.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- EXPORT -->
+    <!-- ========================================================= -->
+
+    <section
+      class="py-24 lg:py-32 bg-[#27312b] text-white relative overflow-hidden"
+    >
+      <div
+        class="absolute -left-40 -top-40 w-[500px] h-[500px] bg-orange/10 blur-[120px] rounded-full"
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div
+              class="text-orangeLight font-semibold text-sm uppercase tracking-[.2em] mb-5"
+            >
+              Global Reach
+            </div>
+
+            <h2
+              class="font-display text-4xl sm:text-5xl font-bold leading-tight"
+            >
+              Connecting Sumatra
+              <span class="text-orangeLight"> with global markets. </span>
+            </h2>
+
+            <p class="text-white/50 leading-8 mt-6 max-w-xl">
+              We are committed to serving international buyers with dependable
+              products, professional communication, and flexible export
+              solutions.
+            </p>
+
+            <div class="mt-9 flex flex-wrap gap-3">
+              <span
+                class="px-5 py-3 rounded-full border border-white/10 bg-white/5 text-sm"
+              >
+                Middle East
+              </span>
+
+              <span
+                class="px-5 py-3 rounded-full border border-white/10 bg-white/5 text-sm"
+              >
+                Europe
+              </span>
+
+              <span
+                class="px-5 py-3 rounded-full border border-white/10 bg-white/5 text-sm"
+              >
+                Asia
+              </span>
+
+              <span
+                class="px-5 py-3 rounded-full border border-white/10 bg-white/5 text-sm"
+              >
+                Global Markets
+              </span>
+            </div>
+          </div>
+
+          <!-- Export Stats -->
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-7 rounded-xl bg-white/[.05] border border-white/10">
+              <div class="text-4xl font-display font-bold text-orangeLight">
+                01
+              </div>
+
+              <div class="font-semibold mt-5">Global Quality</div>
+
+              <p class="text-sm text-white/40 mt-2 leading-6">
+                Products prepared for international buyers.
+              </p>
+            </div>
+
+            <div class="p-7 rounded-xl bg-white/[.05] border border-white/10">
+              <div class="text-4xl font-display font-bold text-orangeLight">
+                02
+              </div>
+
+              <div class="font-semibold mt-5">Flexible MOQ</div>
+
+              <p class="text-sm text-white/40 mt-2 leading-6">
+                Discuss your preferred order quantity.
+              </p>
+            </div>
+
+            <div class="p-7 rounded-xl bg-white/[.05] border border-white/10">
+              <div class="text-4xl font-display font-bold text-orangeLight">
+                03
+              </div>
+
+              <div class="font-semibold mt-5">Custom Packaging</div>
+
+              <p class="text-sm text-white/40 mt-2 leading-6">
+                Packaging options according to your requirements.
+              </p>
+            </div>
+
+            <div class="p-7 rounded-xl bg-white/[.05] border border-white/10">
+              <div class="text-4xl font-display font-bold text-orangeLight">
+                04
+              </div>
+
+              <div class="font-semibold mt-5">Export Support</div>
+
+              <p class="text-sm text-white/40 mt-2 leading-6">
+                Professional support throughout the order process.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- CTA -->
+    <!-- ========================================================= -->
+
+    <section
+      id="contact"
+      class="py-24 lg:py-32 bg-orange relative overflow-hidden"
+    >
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute w-[500px] h-[500px] border-[80px] border-white rounded-full -right-40 -top-40"
+        ></div>
+
+        <div
+          class="absolute w-[300px] h-[300px] border-[50px] border-white rounded-full -left-20 -bottom-20"
+        ></div>
+      </div>
+
+      <div class="relative max-w-5xl mx-auto px-5 lg:px-8 text-center">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/10 text-white text-sm mb-7"
+        >
+          <span class="w-2 h-2 bg-white rounded-full"></span>
+          Let's Work Together
+        </div>
+
+        <h2
+          class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
+        >
+          Looking for a reliable
+          <br class="hidden sm:block" />
+          briquette supplier?
+        </h2>
+
+        <p class="max-w-2xl mx-auto mt-6 text-white/80 text-lg leading-8">
+          Tell us about your requirements, target market, quantity, packaging,
+          and specifications. Our team will get back to you.
+        </p>
+
+        <div class="mt-9 flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="mailto:export@bricketsumatera.com"
+            class="inline-flex items-center justify-center gap-3 bg-white text-neutral-900 px-7 py-4 rounded-full font-semibold hover:bg-neutral-100 transition"
+          >
+            Request a Quote
+
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://wa.me/6281234567890"
+            class="inline-flex items-center justify-center gap-3 border border-white/40 text-white px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition"
+          >
+            WhatsApp Us
+
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================================= -->
+
+    <footer class="bg-[#27312b] text-white">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-16 pb-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-14">
+          <!-- Brand -->
+
+          <div class="lg:col-span-2">
+            <a href="#" class="flex items-center gap-3">
+              <div
+                class="w-11 h-11 rounded-xl bg-orange flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M12 3v18M7 6c3 1 7 1 10 0M7 18c3-1 7-1 10 0M5 9c4 1 10 1 14 0M5 15c4-1 10-1 14 0"
+                  />
+                </svg>
+              </div>
+
+              <div>
+                <div class="font-display font-bold">CV BRICKET</div>
+
+                <div
+                  class="text-orangeLight text-[10px] tracking-[.2em] font-semibold"
+                >
+                  SUMATERA
+                </div>
+              </div>
+            </a>
+
+            <p class="mt-6 max-w-md text-white/40 leading-7">
+              Premium Indonesian coconut charcoal briquettes for international
+              markets. From Sumatra to the world.
+            </p>
+          </div>
+
+          <!-- Navigation -->
+
+          <div>
+            <h3 class="font-semibold mb-5">Navigation</h3>
+
+            <div class="flex flex-col gap-3 text-sm text-white/40">
+              <a href="#about" class="hover:text-white transition">
+                About Us
+              </a>
+
+              <a href="#products" class="hover:text-white transition">
+                Products
+              </a>
+
+              <a href="#quality" class="hover:text-white transition">
+                Quality
+              </a>
+
+              <a href="#process" class="hover:text-white transition">
+                Process
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact -->
+
+          <div>
+            <h3 class="font-semibold mb-5">Contact</h3>
+
+            <div class="flex flex-col gap-4 text-sm text-white/40">
+              <a
+                href="mailto:export@bricketsumatera.com"
+                class="hover:text-white transition break-all"
+              >
+                export@bricketsumatera.com
+              </a>
+
+              <a href="tel:+6281234567890" class="hover:text-white transition">
+                +62 812 3456 7890
+              </a>
+
+              <p>Sumatra, Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+
+        <div
+          class="pt-7 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4 text-xs text-white/30"
+        >
+          <p>© 2026 CV Bricket Sumatera. All rights reserved.</p>
+
+          <p>Indonesian Coconut Charcoal Exporter</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================================= -->
+
+    <script>
+      // Navbar background when scrolling
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+          navbar.classList.add(
+            "bg-[#27312b]/95",
+            "backdrop-blur-xl",
+            "shadow-lg",
+          );
+        } else {
+          navbar.classList.remove(
+            "bg-[#27312b]/95",
+            "backdrop-blur-xl",
+            "shadow-lg",
+          );
+        }
+      });
+
+      // Mobile menu
+      const mobileMenuButton = document.getElementById("mobileMenuButton");
+
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu after clicking link
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
 </html>
